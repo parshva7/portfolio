@@ -1,4 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
+  const intro = document.querySelector('.portfolio-intro');
+  const dismissIntro = () => intro?.classList.add('is-done');
+  intro?.querySelector('.intro-skip')?.addEventListener('click', dismissIntro);
+  window.setTimeout(dismissIntro, window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 0 : 3200);
+
   document.getElementById('year').textContent = new Date().getFullYear();
 
   const header = document.querySelector('.site-header');
