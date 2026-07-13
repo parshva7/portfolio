@@ -2,7 +2,24 @@ document.addEventListener('DOMContentLoaded', () => {
   const intro = document.querySelector('.portfolio-intro');
   const dismissIntro = () => intro?.classList.add('is-done');
   intro?.querySelector('.intro-skip')?.addEventListener('click', dismissIntro);
-  window.setTimeout(dismissIntro, window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 0 : 3200);
+  const introName = document.getElementById('intro-name');
+  const fullName = 'PARSHVA PANCHAL';
+  if (introName && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    let letter = 0;
+    const typeIntroName = () => {
+      introName.textContent = fullName.slice(0, letter);
+      if (letter < fullName.length) {
+        letter += 1;
+        window.setTimeout(typeIntroName, 110);
+      } else {
+        window.setTimeout(dismissIntro, 900);
+      }
+    };
+    typeIntroName();
+  } else {
+    if (introName) introName.textContent = fullName;
+    window.setTimeout(dismissIntro, 0);
+  }
 
   document.getElementById('year').textContent = new Date().getFullYear();
 
