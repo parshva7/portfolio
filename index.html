@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of Parshva Panchal, a software developer building thoughtful digital products.">
+    <title>Parshva Panchal</title>
+  <link rel="icon" type="image/png" href="img.png">
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @media (max-width:800px) { .experience-layout { grid-template-columns:1fr; gap:35px; } .experience-heading > p:last-child { max-width:520px; } }
+        @media (max-width:520px) { .experience-card { padding:23px; box-shadow:9px 10px 0 #bef264; } .experience-title { align-items:flex-start; } .inspection-visual { width:100px; height:85px; flex-basis:100px; } .inspect-seat { top:32px; left:19px; } .experience-meta span:last-child { margin-left:0; } }
+        .achievement-badge { position:relative; isolation:isolate; overflow:hidden; padding:17px 18px; border-color:rgba(253,224,71,.55); background:linear-gradient(110deg,rgba(120,53,15,.5),rgba(250,204,21,.13) 48%,rgba(30,41,59,.4)); box-shadow:inset 0 1px rgba(255,255,255,.09),0 10px 25px rgba(2,6,23,.18); } .achievement-badge::before { content:''; position:absolute; z-index:-1; top:-110%; bottom:-110%; width:34%; background:linear-gradient(90deg,transparent,rgba(255,255,255,.2),transparent); transform:rotate(19deg); animation:achievementShine 4.2s ease-in-out infinite; } .achievement-medal { width:59px; height:59px; flex-basis:59px; background:conic-gradient(from 30deg,#fef3c7,#f59e0b,#fff7d6,#d97706,#fef3c7); color:#6b3400; box-shadow:0 0 0 1px #fde68a,0 8px 16px rgba(120,53,15,.5); animation:achievementFloat 3.2s ease-in-out infinite; } .achievement-medal::before { width:76px; height:76px; border-style:solid; border-color:rgba(253,224,71,.24); animation:achievementOrbit 5s linear infinite; } .achievement-medal::after { content:'✦'; position:absolute; top:-15px; right:-14px; color:#fef08a; font-size:1rem; text-shadow:0 0 12px #fde047; animation:achievementSpark 1.7s ease-in-out infinite; } .achievement-medal i { top:7px; left:50%; transform:translateX(-50%); padding:2px 5px; border-radius:4px; color:#7c2d12; background:rgba(255,255,255,.48); font-size:.48rem; letter-spacing:.06em; } .achievement-medal span { margin-top:13px; font-size:1.45rem; filter:drop-shadow(0 1px 0 #fef3c7); } .achievement-badge p { color:#fde68a; } .achievement-badge h4 { font-size:.94rem; } @keyframes achievementFloat { 50% { transform:translateY(-6px) rotate(5deg); } } @keyframes achievementOrbit { to { transform:rotate(360deg); } } @keyframes achievementSpark { 50% { transform:scale(1.6) rotate(45deg); opacity:.48; } } @keyframes achievementShine { 0%,55% { left:-45%; } 100% { left:125%; } }
+        .education-section { background:linear-gradient(135deg,#fff7ed,#fffbeb 55%,#fef3c7); overflow:hidden; } .education-layout { display:grid; grid-template-columns:.72fr 1.28fr; align-items:center; gap:9%; } .education-visual { min-height:330px; display:grid; place-items:center; position:relative; } .knowledge-orbit { position:absolute; width:250px; aspect-ratio:1; border:1px dashed rgba(180,83,9,.38); border-radius:50%; animation:spin 16s linear infinite; } .knowledge-orbit i { position:absolute; top:13px; left:50%; width:10px; height:10px; border-radius:50%; background:#f59e0b; box-shadow:0 0 16px #f59e0b; } .orbit-b { width:175px; border-style:solid; border-color:rgba(124,58,237,.28); animation-direction:reverse; animation-duration:10s; } .orbit-b i { background:#8b5cf6; box-shadow:0 0 16px #8b5cf6; } .graduation-cap { width:110px; height:92px; position:relative; z-index:1; animation:capFloat 3.4s ease-in-out infinite; } .graduation-cap b { position:absolute; top:18px; left:4px; width:102px; height:49px; background:#4c1d95; clip-path:polygon(50% 0,100% 50%,50% 100%,0 50%); box-shadow:0 8px 14px rgba(76,29,149,.25); } .graduation-cap i { position:absolute; top:57px; left:35px; width:42px; height:22px; border-radius:0 0 16px 16px; background:#6d28d9; } .graduation-cap::after { content:''; position:absolute; top:40px; right:0; width:2px; height:41px; background:#f59e0b; transform:rotate(18deg); transform-origin:top; } .knowledge-label { position:absolute; bottom:20px; color:#92400e; font:600 .66rem var(--mono); letter-spacing:.17em; } .education-card { padding:35px; border:1px solid #fed7aa; border-radius:16px; background:rgba(255,255,255,.75); box-shadow:16px 18px 0 #fdba74; backdrop-filter:blur(10px); } .education-card h2 { margin:13px 0 28px; font-size:clamp(2rem,4vw,3.5rem); } .education-school { display:flex; align-items:flex-start; justify-content:space-between; gap:18px; padding:18px 0; border-top:1px solid #fed7aa; border-bottom:1px solid #fed7aa; } .education-school h3 { font-size:1.1rem; } .education-school p,.education-degree { color:#8a5b35; font-size:.8rem; } .education-school > span { display:grid; place-items:center; width:42px; height:42px; flex:0 0 42px; border-radius:12px; color:#fff; background:#7c3aed; font:600 .68rem var(--mono); animation:schoolBadge 2.5s ease-in-out infinite; } .education-degree { margin:20px 0; } .education-degree strong { color:#5b21b6; } .cgpa-meter { display:inline-flex; align-items:center; gap:7px; padding:11px 15px; border:1px solid #f3d4b1; border-radius:99px; background:#fff7ed; box-shadow:0 5px 14px rgba(180,83,9,.08); animation:cgpaFloat 3s ease-in-out infinite; } .cgpa-meter span { color:#92400e; font:500 .58rem var(--mono); text-transform:uppercase; letter-spacing:.08em; } .cgpa-meter strong { color:#7c3aed; font-size:1.65rem; letter-spacing:-.08em; } .cgpa-meter small { color:#9a7b5c; font:500 .65rem var(--mono); } .cgpa-meter em { color:#f59e0b; font-style:normal; animation:cgpaSpark 1.8s ease-in-out infinite; } @keyframes capFloat { 50% { transform:translateY(-13px) rotate(-4deg); } } @keyframes schoolBadge { 50% { transform:rotate(8deg) scale(1.08); } } @keyframes cgpaFloat { 50% { transform:translateY(-4px); box-shadow:0 8px 18px rgba(124,58,237,.16); } } @keyframes cgpaSpark { 50% { transform:scale(1.35) rotate(30deg); opacity:.45; } }
+        @media (max-width:800px) { .education-layout { grid-template-columns:1fr; gap:20px; } .education-visual { min-height:250px; } }
+        @media (max-width:520px) { .education-card { padding:25px; box-shadow:9px 10px 0 #fdba74; } .education-school h3 { font-size:1rem; } }
+        .education-photo { display:block; min-height:0; height:350px; overflow:hidden; border:1px solid #fed7aa; border-radius:16px; background:#1f2937; box-shadow:15px 17px 0 #c4b5fd; } .education-photo img { width:100%; height:100%; display:block; object-fit:cover; object-position:center; filter:contrast(1.05) saturate(.9); animation:campusBreathe 13s ease-in-out infinite alternate; } .education-photo::before { content:''; position:absolute; z-index:1; inset:0; background:linear-gradient(to top,rgba(15,23,42,.75),transparent 52%); pointer-events:none; } .education-photo::after { content:''; position:absolute; z-index:2; inset:11px; border:1px solid rgba(255,255,255,.3); border-radius:9px; pointer-events:none; } .education-photo figcaption { position:absolute; z-index:3; bottom:19px; left:19px; display:flex; align-items:center; gap:8px; color:#fff; font:500 .61rem var(--mono); letter-spacing:.07em; text-transform:uppercase; } .education-photo figcaption span { width:7px; height:7px; border-radius:50%; background:#c4b5fd; box-shadow:0 0 12px #c4b5fd; animation:statusPulse 2s ease-in-out infinite; } @keyframes campusBreathe { to { transform:scale(1.075); } } @media (max-width:800px) { .education-photo { height:300px; } }
+        .skills-grid { grid-template-columns:repeat(3,minmax(0,1fr)); } @media (max-width:950px) { .skills-grid { grid-template-columns:repeat(2,minmax(0,1fr)); } } @media (max-width:560px) { .skills-grid { grid-template-columns:1fr; } }
+        .hero-identity { display:flex; align-items:center; gap:11px; color:#526076; font:600 1.08rem var(--sans); } .hero-identity > span { display:inline-block; animation:identityLift 3.6s ease-in-out infinite; } .hero-identity > span:last-of-type { animation-delay:-1.15s; } .hero-identity b { width:31px; height:31px; display:grid; place-items:center; position:relative; border-radius:50%; color:#fff; background:linear-gradient(135deg,#4f46e5,#7c3aed); box-shadow:0 0 0 5px rgba(79,70,229,.1),0 0 22px rgba(79,70,229,.35); font-size:1.35rem; line-height:1; animation:crossPulse 2.4s ease-in-out infinite; } .hero-identity b::before,.hero-identity b::after { content:''; position:absolute; top:50%; width:18px; height:1px; background:linear-gradient(90deg,transparent,#818cf8); } .hero-identity b::before { right:100%; } .hero-identity b::after { left:100%; transform:rotate(180deg); } .hero-identity i { color:#bef264; font-size:1.65rem; font-style:normal; animation:dotBlink 1.4s steps(2,end) infinite; } @keyframes crossPulse { 50% { transform:rotate(180deg) scale(1.14); box-shadow:0 0 0 9px rgba(79,70,229,.06),0 0 30px rgba(124,58,237,.56); } } @keyframes identityLift { 50% { transform:translateY(-3px); color:#3730a3; } } @keyframes dotBlink { 50% { opacity:.2; transform:translateY(-3px); } }
+    </style>
+</head>
+<body>
+    <div class="page-glow glow-one" aria-hidden="true"></div>
+    <div class="page-glow glow-two" aria-hidden="true"></div>
+
+    <header class="site-header">
+        <div class="container nav-wrap">
+            <a class="logo" href="#home" aria-label="Parshva Panchal home"><span>PP</span> Parshva Panchal</a>
+            <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Open navigation"><span></span><span></span></button>
+            <nav id="site-nav" class="site-nav" aria-label="Main navigation">
+                <a class="active" href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#projects">Projects</a>
+                <a href="#experience">Experience</a>
+                <a href="#education">Education</a>
+                <a href="#skills">Skills</a>
+                <a class="nav-contact" href="#contact">Let’s talk <span>↗</span></a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="container hero-grid">
+                <div class="hero-copy reveal">
+                    <p class="eyebrow"><span></span> Available for new opportunities</p>
+                    <h1>Thanks for <em>stopping by.</em></h1>
+                    <p class="hero-intro hero-identity"><span>AI</span><b aria-hidden="true">×</b><span>Engineering</span><i aria-hidden="true">.</i></p>
+                    <p class="role-line"><span class="role-prefix">Currently focused on</span> <span id="role-text">AI engineering</span><span class="cursor">_</span></p>
+                    <div class="hero-actions">
+                        <a href="#projects" class="button button-primary">Explore my work <span>↓</span></a>
+                        <a href="#contact" class="text-link">Start a conversation <span>→</span></a>
+                    </div>
+                </div>
+                <div class="hero-art reveal reveal-delay" aria-label="Abstract developer portrait illustration">
+                    <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+                    <div class="portrait-card">
+                        <button class="portrait-flip" type="button" aria-label="Show Parshva's photo" aria-pressed="false">
+                            <span class="portrait-face portrait-initials">Parshva</span>
+                            <span class="portrait-face portrait-photo"><img src="parshva.png" alt="Parshva"></span>
+                        </button>
+                        <div class="status-pill"><i></i> Open to work</div>
+                    </div>
+                    <div class="code-chip chip-one"><span>&lt;/&gt;</span> build</div>
+                    <div class="code-chip chip-two"><span>✦</span> ship</div>
+                </div>
+            </div>
+            <a class="scroll-cue" href="#about"><span></span> Scroll to discover</a>
+        </section>
+
+        <section id="about" class="section">
+            <div class="container about-grid">
+                <div class="section-heading reveal">
+                    <p class="eyebrow">01 — About</p>
+                    <h2>AI is my tool, Engineering is my work.</h2>
+                </div>
+                <div class="about-copy reveal reveal-delay">
+                    <p>Currently working as an Artificial Intelligence Engineer at Godrej Enterprises Group, contributing to automation and vision-based projects by developing AI and computer vision solutions for real-world applications. I work with Python, computer vision, Tableau, and payment gateway systems.</p>
+                    <p>I’m pursuing a Bachelor of Technology in Artificial Intelligence at Dwarkadas J. Sanghvi College of Engineering, combining academic knowledge with hands-on industry experience. I also hold certifications in Database Engineering and JS MERN Full Stack Development, building a strong foundation in software development and data systems.</p>
+                    <a href="#contact" class="text-link">Request my résumé <span>→</span></a>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="section projects-section">
+            <div class="container">
+                <div class="section-top reveal">
+                    <div><p class="eyebrow">02 — Selected work</p><h2>Featured Projects</h2></div>
+                    <p>Each project starts with the same goal: make a useful experience feel simple.</p>
+                </div>
+                <div class="projects-grid">
+                    <article class="project-card featured reveal">
+                        <div class="project-number">01</div>
+                        <div class="project-visual visual-vision"><div class="vision-frame"><i class="vision-corner corner-a"></i><i class="vision-corner corner-b"></i><i class="vision-corner corner-c"></i><i class="vision-corner corner-d"></i><div class="vision-chair"><b></b><i></i><em></em></div><span class="vision-scan"></span></div><p class="vision-label">OBJECT DETECTED</p></div>
+                        <div class="project-content"><p class="project-kind">Computer Vision · Jul 2026</p><h3>Vision-Based Chair Seat Inspection System</h3><p>Cut chair-seat inspection time by <strong>80%+</strong> with automated staple counting, edge detection, and instant PASS/FAIL decisions.</p><div class="tags"><span>Python</span><span>OpenCV</span><span>Image Processing</span><span>PIL</span></div><a href="#contact" class="card-link">Ask about this work <span>↗</span></a></div>
+                    </article>
+                    <article class="project-card reveal reveal-delay">
+                        <div class="project-number">02</div>
+                        <div class="project-visual visual-learn"><div class="learning-card card-back"><i></i><i></i></div><div class="learning-card card-front"><b>▶</b><span>MODULE 08</span><i></i></div><div class="learning-progress"><span></span></div></div>
+                        <div class="project-content"><p class="project-kind">Full Stack App · Nov 2025</p><h3>Online Learning Platform</h3><p>A subscription learning platform for <strong>100+ users</strong>, with progress tracking, Razorpay payments, and role-based access control.</p><div class="tags"><span>JavaScript</span><span>React</span><span>Node.js</span><span>Supabase</span><span>Razorpay</span></div><a href="#contact" class="card-link">Ask about this work <span>↗</span></a></div>
+                    </article>
+                    <article class="project-card reveal reveal-delay-2">
+                        <div class="project-number">03</div>
+                        <div class="project-visual visual-cricket"><div class="score-bars"><i></i><i></i><i></i><i></i><i></i></div><div class="cricket-ball">✦</div><p>MATCH DATA</p></div>
+                        <div class="project-content"><p class="project-kind">Data Analytics · Feb 2026</p><h3>IPL Performance Visualization</h3><p>Analyzed <strong>17 IPL seasons</strong> across 1,000+ matches, building 15+ KPIs and player comparisons across 5+ parameters.</p><div class="tags"><span>Tableau</span><span>SQL</span><span>Data Analytics</span></div><a href="https://public.tableau.com/app/profile/parshva.panchal7696/viz/IPL2008-2024Analysis_17710097503820/STATS" class="card-link">Check Dashboard <span>↗</span></a></div>
+                    </article>
+                    <article class="project-card reveal reveal-delay-2">
+                        <div class="project-number">03</div>
+                        <div class="project-visual visual-cyber"><div class="cyber-grid"></div><div class="cyber-shield"><span>✓</span></div><p class="scan-label">THREAT SCAN <b>SECURE</b></p></div>
+                        <div class="project-content"><p class="project-kind">Machine Learning · Oct 2025</p><h3>Malicious URL Detection System</h3><p>Real-time phishing detection using <strong>10 engineered URL features</strong> and SHAP explanations, achieving <strong>78.3% accuracy.</strong></p><div class="tags"><span>Python</span><span>Machine Learning</span><span>Flask API</span><span>React</span></div><a href="#contact" class="card-link">Ask about this work <span>↗</span></a></div>
+                    </article>
+                    <aside class="ai-lab reveal reveal-delay-3" aria-label="Animated artificial intelligence visualization">
+                        <div class="ai-lab-copy"><p>Always learning</p><h3>Ideas, connected.</h3><span>AI / systems</span></div>
+                        <div class="neural-orbit" aria-hidden="true">
+                            <i class="neural-ring ring-one"></i><i class="neural-ring ring-two"></i>
+                            <i class="neural-line line-one"></i><i class="neural-line line-two"></i><i class="neural-line line-three"></i>
+                            <b class="neural-core">AI</b><i class="neural-node node-one"></i><i class="neural-node node-two"></i><i class="neural-node node-three"></i><i class="neural-node node-four"></i>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience" class="section experience-section">
+            <div class="container experience-layout">
+                <div class="experience-heading reveal"><p class="eyebrow">03 — Experience</p><h2>Building quality into every frame.</h2><p>Applied AI work where real-time computer vision meets production reliability.</p></div>
+                <article class="experience-card reveal reveal-delay">
+                    <div class="experience-meta"><span class="live-dot"></span><span>Jun 2026 — Present</span><span>Mumbai</span></div>
+                    <figure class="experience-photo"><img src="assets/interio-godrej.png" alt="Interio by Godrej manufacturing and OEC office sign"><figcaption><span></span> Interio Campus · Mumbai</figcaption><div class="photo-sparks" aria-hidden="true"><i></i><i></i><i></i></div></figure>
+                    <div class="experience-title"><div><p>AI Engineer</p><h3>Godrej Enterprises Group</h3><span>Interio Business</span></div></div>
+                    <ul class="experience-points"><li>Engineered a computer vision system for chair-seat inspection, automating <strong>100% of the manual inspection process.</strong></li><li>Built a multi-view image pipeline for real-time defect detection, preventing defective units from reaching load testing.</li></ul>
+                    <div class="experience-tags"><span>Computer Vision</span><span>Real-time Detection</span><span>Quality Automation</span></div>
+                    <div class="achievement-badge"><div class="achievement-medal" aria-hidden="true"><i>TOP 3</i><span>★</span></div><div><p>Achievement unlocked</p><h4>Second Runner-up · AUTOMAX 2026</h4><span>Internal Automation Exhibition · Godrej Enterprises Group (Interio Business)</span></div></div>
+                </article>
+            </div>
+        </section>
+
+        <section id="education" class="section education-section">
+            <div class="container education-layout">
+                <figure class="education-visual education-photo reveal"><img src="assets/djsce-campus.png" alt="Dwarkadas J. Sanghvi College of Engineering campus sign"><figcaption><span></span> D.J. Sanghvi College of Engineering</figcaption></figure>
+                <article class="education-card reveal reveal-delay"><p class="eyebrow">04 — Education</p><div class="education-school"><div><h3>Dwarkadas J. Sanghvi College of Engineering</h3><p>Mumbai · Aug 2023 — Present</p></div><span>DJSCE</span></div><p class="education-degree">B.Tech in <strong>Artificial Intelligence &amp; Data Science</strong></p><div class="cgpa-meter"><span>Current CGPA</span><strong>8.48</strong><small>/ 10</small></div></article>
+            </div>
+        </section>
+
+        <section id="skills" class="section skills-section">
+            <div class="container"><div class="section-top reveal"><div><p class="eyebrow">05 — Toolkit</p><h2>Tools I use to make ideas real.</h2></div></div>
+                <div class="skills-grid">
+                    <div class="skill-group reveal"><p>Languages</p><ul><li>C++</li><li>Python</li></ul></div>
+                    <div class="skill-group reveal reveal-delay"><p>Frameworks &amp; Databases</p><ul><li>React</li><li>Responsive UI</li><li>MySQL</li><li>MongoDB</li><li>Supabase</li></ul></div>
+                    <div class="skill-group reveal reveal-delay-2"><p>Backend</p><ul><li>Node.js</li><li>Express.js</li><li>FastAPI</li></ul></div>
+                    <div class="skill-group reveal reveal-delay-3"><p>Tools & Technologies</p><ul><li>Git &amp; GitHub</li><li>Tableau</li><li>REST APIs</li><li>VS Code</li></ul></div>
+                    <div class="skill-group reveal reveal-delay-4"><p>Computer Vision</p><ul><li>OpenCV</li><li>Object Detection</li><li>Image Processing</li><li>YOLO</li><li>PIL</li></ul></div>
+                    <div class="skill-group reveal reveal-delay-4"><p>AI Tools & Techniques</p><ul><li>Ollama - Nemotron & Qwen</li><li>OpenAI API</li></li><li>Huggingface</li><li>Prompt Engineering</li></ul></div>
+
+
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section">
+            <div class="container contact-panel reveal">
+                <div><p class="eyebrow">06 — Contact</p><h2>Have an idea worth building?</h2><p>Whether it’s a project, a role, or just a thoughtful conversation, my inbox is open.</p></div>
+                <form id="contact-form"><label for="name">Your name<input id="name" name="name" type="text" placeholder="Jane Smith" required></label><label for="email">Email address<input id="email" name="email" type="email" placeholder="jane@company.com" required></label><label for="message">What’s on your mind?<textarea id="message" name="message" rows="3" placeholder="Tell me a little about it." required></textarea></label><button class="button button-primary" type="submit">Send message <span>→</span></button><p class="form-status" role="status" aria-live="polite"></p></form>
+            </div>
+        </section>
+    </main>
+
+    <footer><div class="container footer-wrap"><a class="logo" href="#home"><span>PP</span> Parshva Panchal</a><p>© <span id="year"></span> Built with intention.</p><div class="social-links"><a href="https://linkedin.com/in/parshvap1" aria-label="Contact me on LinkedIn">in</a><a href="https://github.com/parshva7" aria-label="Contact me on GitHub">gh</a></div></div></footer>
+    <script src="script.js"></script>
+</body>
+</html>
